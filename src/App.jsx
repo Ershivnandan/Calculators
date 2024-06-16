@@ -16,6 +16,7 @@ function App() {
     if ((key >= '0' && key <= '9') || key === '+' || key === '-' || key === '*' || key === '/' || key === '.' || key === '%') {
       setInput(prevInput => prevInput + key);
     } else if (key === 'Enter') {
+      event.preventDefault(); // Prevent default behavior of Enter key
       handleButtonClick('=');
     } else if (key === 'Backspace') {
       handleButtonClick('<');
